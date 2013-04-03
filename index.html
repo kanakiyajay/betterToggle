@@ -99,10 +99,11 @@ $("#click2").click(function  () {
                 <h3>Inserting Elements</h3>
                 <pre>
 $("#click3").click(function  () {
-var insert = '&lt;img style="display:none" src="images/holi3.jpg" alt="holi"  class="example2 pull-left">';
+var insert = '&lt;img style="display:none" src="images/holi3.jpg"';
 $("#example3").append($(insert).betterToggle());
 });
                 </pre>
+                <p class="text-error">The inserting html should have display:none</p>
                 <button class="btn-primary btn btn-large" id="click3">Insert</button>
             </div>
             <div class="span6" id="example3">
@@ -110,15 +111,10 @@ $("#example3").append($(insert).betterToggle());
             </div>
         </div>
     </div>
-<script src="jquery.min.js"></script>
-<script>
-if (!window.jQuery) {
-    document.write('<script src="jquery.min.js"><\/script>');
-}
-</script>
-<script src="bootstrap.min.js"></script>
-<script src="jquery.betterToggle.js"></script>
-<script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery.betterToggle.js"></script>
+<script type="text/javascript">
 
     $("#click1").click(function  () {
         $("#example1").betterToggle();
@@ -129,7 +125,7 @@ if (!window.jQuery) {
     })
 
     $("#click3").click(function  () {
-      var insert = '<img style="display:none" src="images/holi3.jpg" alt="holi"  class="example2 pull-left">';
+      var insert = '<img style="display:none" src="images/holi3.jpg">';
       $("#example3").append($(insert).betterToggle());
     });
 </script>

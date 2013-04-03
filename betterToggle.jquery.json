@@ -1,7 +1,7 @@
 {
     "name":"betterToggle",
-    "version": "1.0.0",
-    "title":"betterToggle html DOM elements",
+    "version": "1.0.1",
+    "title":"Sleek Css3 toggling of Elements",
     "keywords":["effect","zoom"],
     "author":{
                         "name" : "Jay Kanakiya",

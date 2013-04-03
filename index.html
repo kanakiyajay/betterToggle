@@ -17,42 +17,75 @@
         height: 60px;
         background-color: #f5f5f5;
     }
+    .jumbotron {
+        padding: 100px 0;
+        text-align: center;
+        background: url(images/grey_wash_wall.png);
+      }
+      .jumbotron h1 {
+        font-size: 100px;
+        line-height: 1;
+      }
+      .jumbotron .lead {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+    }
+    .row-fluid{
+        height: 306px;padding-top:20px
+    }
     </style>
+    <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-33060097-1']);
+                            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+    </script>
 <body>
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <a class="brand" href="#">betterToggle</a>
-            <ul class="nav">
-              <li>
-              <li><a href="https://github.com/kanakiyajay/betterToggle">GitHub</a></li>
-            </ul>
-            <a href="http://twitter.com/techiejayk" style="float:right" class="brand pull-right">Jay Kanakiya</a>
-      </div>
+    <div class="jumbotron masthead">
+        <div class="container">
+            <h1>betterToggle</h1>
+            <p class="lead">Sleek CSS3 toggling of Elements.</p>
+            <p><a class="btn btn-large btn-inverse" href="https://github.com/kanakiyajay/betterToggle/raw/master/jquery.betterToggle.js">Download</a></p>
+    <p>
+        </div>
     </div>
-    <div class="container-fluid">
-        <div class="row-fluid" style="height: 306px;padding-top:20px">
-            <div class="span3">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6">
                 <h3>Single Element</h3>
-                <button class="btn btn-large btn-primary" id="click1">TOGGLE</button>
-            </div>
-            <div class="span4">
-
-                    <img id="example1" src="images/hoi-festival-india.jpg" alt="Holi">
-
-            </div>
-            <div class="span3">
                 <h4>code</h4>
                 <pre>
  $("#click").click(function  () {
     $("example1").betterToggle();
 });
                 </pre>
+                <button class="btn btn-large btn-primary" id="click1">Toggle</button>
+            </div>
+            <div class="span6">
+                    <img id="example1" src="images/hoi-festival-india.jpg" alt="Holi">
             </div>
         </div>
-        <div class="row-fluid"  style="height: 306px;padding-top:20px">
-            <div class="span2">
+        <div class="row-fluid">
+            <div class="span4">
                 <h3>Multiple Elements</h3>
-                <button class="btn-primary btn btn-large" id="click2">Toggle</button>
+                <h4>Code</h4>
+                <pre>
+$("#click2").click(function  () {
+    $(".example2").betterToggle();
+})
+                </pre>
+                <button class="btn-primary btn btn-large" id="click2">Toggle All</button>
             </div>
             <div class="span3">
                 <img src="images/holi2.jpg" alt="holi" class="example2 pull-left">
@@ -60,19 +93,31 @@
             <div class="span3">
                 <img src="images/holi3.jpg" alt="holi"  class="example2 pull-left">
             </div>
-            <div class="span3">
-                <h4>Code</h4>
+        </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <h3>Inserting Elements</h3>
                 <pre>
-$("#click2").click(function  () {
-    $(".example2").betterToggle();
-})
+$("#click3").click(function  () {
+var insert = '&lt;img style="display:none" src="images/holi3.jpg" alt="holi"  class="example2 pull-left">';
+$("#example3").append($(insert).betterToggle());
+});
                 </pre>
+                <button class="btn-primary btn btn-large" id="click3">Insert</button>
+            </div>
+            <div class="span6" id="example3">
+
             </div>
         </div>
     </div>
-<script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="bootstrap.min.js"></script>
-<script type="text/javascript" src="jquery.betterToggle.js"></script>
+<script src="jquery.min.js"></script>
+<script>
+if (!window.jQuery) {
+    document.write('<script src="jquery.min.js"><\/script>');
+}
+</script>
+<script src="bootstrap.min.js"></script>
+<script src="jquery.betterToggle.js"></script>
 <script>
 
     $("#click1").click(function  () {
@@ -82,6 +127,11 @@ $("#click2").click(function  () {
     $("#click2").click(function  () {
         $(".example2").betterToggle();
     })
+
+    $("#click3").click(function  () {
+      var insert = '<img style="display:none" src="images/holi3.jpg" alt="holi"  class="example2 pull-left">';
+      $("#example3").append($(insert).betterToggle());
+    });
 </script>
 </body>
 </html>

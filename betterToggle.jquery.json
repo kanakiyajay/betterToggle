@@ -1,0 +1,19 @@
+{
+    "name":"betterToggle",
+    "version":"0.1",
+    "title":"betterToggle html DOM elements",
+    "author":"Jay Kanakiya",
+    "licenses": [
+        {
+            "type": "GPLv2",
+            "url": "http://www.example.com/licenses/gpl.html"
+        }
+    ],
+    "dependencies":"jquery",
+    "description":"Show and Hide Elements better",
+    "keywords":["effect"],
+    "homepage":"http://jquer.in/betterToggle-jquery-plugin",
+    "demo":"http://jquer.in/betterToggle-jquery-plugin-demo"
+
+
+}

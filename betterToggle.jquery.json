@@ -1,19 +1,25 @@
 {
     "name":"betterToggle",
-    "version":"0.1",
+    "version": "1.0.0",
     "title":"betterToggle html DOM elements",
-    "author":"Jay Kanakiya",
+    "keywords":["effect","zoom"],
+    "author":{
+                        "name" : "Jay Kanakiya",
+                            "email" : "kanakiyajay@yahoo.com",
+                            "url" : "http://jquer.in"
+                    },
     "licenses": [
         {
             "type": "GPLv2",
             "url": "http://www.example.com/licenses/gpl.html"
         }
     ],
-    "dependencies":"jquery",
+    "dependencies": {
+        "jquery": ">=1.5"
+    },
     "description":"Show and Hide Elements better",
-    "keywords":["effect"],
     "homepage":"http://jquer.in/betterToggle-jquery-plugin",
-    "demo":"http://jquer.in/betterToggle-jquery-plugin-demo"
+    "demo":"http://jquer.in/betterToggle-jquery-plugin"
 
 
 }
